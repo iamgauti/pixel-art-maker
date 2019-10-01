@@ -3,10 +3,14 @@
 
 // When size is submitted by the user, call makeGrid()
 document.getElementById("butt").addEventListener('click', makeGrid);
-
+document.getElementById("butt1").addEventListener('click', changecolor);
+let colr;
+function changecolor() {
+	colr = document.getElementById("colorPicker").value;
+}
 function makeGrid() {
 	event.preventDefault();
-	let colr = document.getElementById("colorPicker").value;
+	colr = document.getElementById("colorPicker").value;
 	let hgt = document.getElementById("inputHeight").value;
 	let wid = document.getElementById("inputWeight").value;
 	let pc = document.getElementById("pixelCanvas");
